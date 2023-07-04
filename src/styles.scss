@@ -1,1 +1,47 @@
+@import "themes";
+
+@import "@nebular/theme/styles/globals";
+@import "@nebular/auth/styles/globals";
+
+@include nb-install() {
+  @include nb-theme-global();
+  @include nb-auth-global();
+}
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif !important;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.scrollable-container {
+  height: 100%;
+}
+
+.layout {
+  min-height: 100% !important;
+  height: 100% !important;
+}
+
+nb-layout-column {
+  padding: 0 !important;
+}
+
+button:focus {
+  box-shadow: none !important;
+  border: inherit !important;
+}
+
+button:active {
+  border: inherit !important;
+}
+
+button:hover {
+  border: inherit !important;
+}
