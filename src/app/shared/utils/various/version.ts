@@ -1,10 +1,10 @@
 import { isDevMode } from '@angular/core';
 import { StringHelper } from '../types/string';
+import { environment } from 'src/environments/environment';
 
 export class VersionHelper {
   public static getAppVersion(): string {
-    const keyAppVer = 'APP_VERSION';
-    return window[keyAppVer] + '.' + VersionHelper.getBuildNo();
+    return environment.appVersion;
   }
 
   public static getBuildNo(): string {
